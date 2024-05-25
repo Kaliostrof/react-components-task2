@@ -1,5 +1,12 @@
 export const Year = () => {
-	let thisYear = new Date().getFullYear(); //декларативный подход, я просто запрашиваю время
+	//декларативный подход
+	let t = new Date();
+	setInterval(() => render(), 180000);
 
-	return thisYear;
+	function render() {
+		console.log(t.getFullYear());
+		return t.getFullYear();
+	}
+
+	return render();
 };
